@@ -7,6 +7,7 @@ class SimpleNotepad:
         self.root.title("Простой блокнот")
         self.root.geometry("600x400")
         
+
         # Создаем текстовое поле с прокруткой ёпта
         self.text_area = scrolledtext.ScrolledText(root, wrap=tk.WORD, font=("Arial", 12))
         self.text_area.pack(fill=tk.BOTH, expand=True)
@@ -25,6 +26,7 @@ class SimpleNotepad:
         self.menu_bar.add_cascade(label="Файл", menu=self.file_menu)
         
         # Горячие клавиши ёпта
+
         self.root.bind_all("<Control-n>", lambda event: self.new_file())
         self.root.bind_all("<Control-o>", lambda event: self.open_file())
         self.root.bind_all("<Control-s>", lambda event: self.save_file())
@@ -63,3 +65,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = SimpleNotepad(root)
     root.mainloop()
+
